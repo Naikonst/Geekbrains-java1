@@ -4,8 +4,9 @@ public class MainClass {
 
     public static void main(String[] args) {
 
-        Cat cat = new Cat("Barsik", "Black", 3);
+        Cat cat = new Cat("Barsik", "Black", 3);   // Cat@1
         Dog dog = new Dog("Jack", "White", 5);
+        cat.equals(dog);
         Bird bird = new Bird("Kesha1", "Red", 2, 10);
         Parrot parrot = new Parrot("Kesha2", "Red", 2, 10);
         Snake snake = new Snake("Kaa", "Brown", 1);

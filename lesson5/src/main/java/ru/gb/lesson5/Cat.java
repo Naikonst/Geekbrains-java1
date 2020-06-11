@@ -53,4 +53,13 @@ public class Cat {
         System.out.printf("Cat: %s jumps", name);
         System.out.println();
     }
+
+    @Override
+    public boolean equals(Object anObject){
+        if (anObject instanceof Cat) {
+            Cat anotherCat = (Cat)anObject;
+            return this.name.equals(anotherCat.name);
+        }
+        return false;
+    }
 }
