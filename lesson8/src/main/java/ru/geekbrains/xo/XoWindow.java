@@ -14,21 +14,18 @@ public class XoWindow extends JFrame {
     private XoSettingsWindow settingsWindow;
     private XoFieldPanel fieldPanel;
 
-    public XoWindow() {
+    public XoWindow() throws InterruptedException {
         setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
         setLocation(WINDOW_POS_X, WINDOW_POS_Y);
 
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-
         setTitle("Крестики - Нолики");
         setResizable(false);
 
         this.settingsWindow = new XoSettingsWindow(this);
-
         JButton buttonStart = createStartButton();
         JButton buttonExit = createExitButton();
         JPanel buttonPanel = new JPanel(new GridLayout(1, 2));
-
         buttonPanel.add(buttonStart);
         buttonPanel.add(buttonExit);
         add(buttonPanel, BorderLayout.SOUTH);
@@ -68,5 +65,6 @@ public class XoWindow extends JFrame {
         });
         return button;
     }
+
 
 }

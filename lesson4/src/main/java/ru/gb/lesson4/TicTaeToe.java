@@ -41,7 +41,7 @@ public class TicTaeToe {
         while (true) {
             humanTurn();
             printField();
-            if (isWinnerExists(DOT_HUMAN)) {
+            if (isWinnerSequenceExistsFor(DOT_HUMAN)) {
                 System.out.println("Победил Игрок!");
                 break;
             }
@@ -52,7 +52,7 @@ public class TicTaeToe {
 
             aiTurn();
             printField();
-            if (isWinnerExists(DOT_AI)) {
+            if (isWinnerSequenceExistsFor(DOT_AI)) {
                 System.out.println("Победил Компьютер!");
                 break;
             }
@@ -141,7 +141,7 @@ public class TicTaeToe {
     }
 
     //checkWin
-    private static boolean isWinnerExists(char symb) {
+    private static boolean isWinnerSequenceExistsFor(char symb) {
         if (field[0][0] == symb && field[0][1] == symb && field[0][2] == symb) return true;
         if (field[1][0] == symb && field[1][1] == symb && field[1][2] == symb) return true;
         if (field[2][0] == symb && field[2][1] == symb && field[2][2] == symb) return true;
